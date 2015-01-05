@@ -166,3 +166,7 @@ RKBatchTool    - 单击 “Restore”按钮格式化，然后烧写镜像。
 1）USB线供电不足，此时建议更换质量好的USB线 或者在进入刷机模式后插上电源
 
 2 ) bootloader 版本不同导致，如果你之前刷的固件的bootloader版本是高版本，然后刷回低版本的固件，那么你可能会遇到这个问题。板子这是“变砖”了。。。按照这个 http://wiki.radxa.com/Rock/unbrick 解决它。
+
+参考：
+
+1. http://radxa.com/Rock/flash_the_image
