@@ -3,7 +3,7 @@ layout: post
 title: 将image烧写到NAND
 category: 入门
 tags: [入门, Flash, image, NAND]
-keywords: PHP,Mac,Brew,旧版本,Version
+keywords: image,NAND
 description: 
 ---
 >这篇文章描述了如何在Radxa Rock的nand flash上安装镜像，比如，如何烧写开发板。你可以选择烧写整个nand镜像（比如update.img）到开发板或者仅仅烧写选定的分区。你可以从我们的服务器下载prebuilt镜像或者编译你自己的镜像。
