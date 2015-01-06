@@ -111,9 +111,137 @@
       </item>
     
       <item>
+        <title>2014.06.10 Rock Pro发布</title>
+        <link>http://itfanr.github.io/radxa123/2015/01/01/20140610-Rock-pro-release.html</link>
+        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2015/01/01/20140610-Rock-pro-release.html</guid>
+        <pubDate>Thu, 01 Jan 2015 00:00:00 +0800</pubDate>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;这个一款新的硬件版本，满足了社区的要求。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;主要的改变是：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;增加LVDS接口（FPC接口位于主板底部）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;增加触控面板接口&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;增加连接摄像模块的CSI接口&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;主板多了扬声器驱动电路&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;其余和Rock保持一致&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/9/90/Pro_front.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/9/9e/Pro_back.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;参考：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;http://radxa.com/Rock/hardware_revision&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+      </item>
+    
+      <item>
+        <title>2014.06.10 Rock Lite发布</title>
+        <link>http://itfanr.github.io/radxa123/2015/01/01/20140610-Rock-Lite-release.html</link>
+        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2015/01/01/20140610-Rock-Lite-release.html</guid>
+        <pubDate>Thu, 01 Jan 2015 00:00:00 +0800</pubDate>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;这个一款新的硬件版本，满足了社区的要求。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;主要的改变是：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;增加LVDS接口（FPC接口位于主板底部）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;增加触控面板接口&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;增加连接摄像模块的CSI接口&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;主板多了扬声器驱动电路&lt;/li&gt;
+  &lt;li&gt;没有Nand，1G DDR&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/7/74/Rock_lite.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/0/04/Rock_lite_back.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;参考：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;http://radxa.com/Rock/hardware_revision&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+      </item>
+    
+      <item>
+        <title>2013.10.25 第一个MP版本</title>
+        <link>http://itfanr.github.io/radxa123/2015/01/01/20131025-First-MP-version-release.html</link>
+        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2015/01/01/20131025-First-MP-version-release.html</guid>
+        <pubDate>Thu, 01 Jan 2015 00:00:00 +0800</pubDate>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;这是Radxa Rock的第一个MP版本。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;这个版本修复了所有在2013.08.12版本已知的问题。因为HDMI接口的的位置移动了一点，这个版本的例子无法用在之前的版本上，除了一些简单的例子。软件和之前的版本是一样的。&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;电路方面的改变&lt;/h2&gt;
+
+&lt;h2 id=&quot;pcb&quot;&gt;PCB方面的改变&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/4/47/Rock_front.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/7/71/Rock_back.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;参考：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;http://radxa.com/Rock/hardware_revision&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+      </item>
+    
+      <item>
+        <title>如何进入recovery 模式</title>
+        <link>http://itfanr.github.io/radxa123/2014/12/31/enter-recovery-mode.html</link>
+        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2014/12/31/enter-recovery-mode.html</guid>
+        <pubDate>Wed, 31 Dec 2014 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;只需要4步&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;断开电源&lt;/li&gt;
+  &lt;li&gt;拔掉USB线&lt;/li&gt;
+  &lt;li&gt;长按recovery键&lt;/li&gt;
+  &lt;li&gt;插入usb线到otg口&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;此时如何连接有刷机工具（RKBatchTool.exe， RKAndroidTool 或者linux下工具 ） 工具会自动识别设备&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cn.radxa.com/data/attachment/forum/201412/10/115141iab5zgauntihlb0a.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
         <title>关于显示</title>
-        <link>http://itfanr.github.io/radxa123/2014/12/31/radxa-rock-display.html</link>
-        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2014/12/31/radxa-rock-display.html</guid>
+        <link>http://itfanr.github.io/radxa123/2014/12/31/Radxa-Rock-display.html</link>
+        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2014/12/31/Radxa-Rock-display.html</guid>
         <pubDate>Wed, 31 Dec 2014 00:00:00 +0800</pubDate>
         <description>&lt;blockquote&gt;
   &lt;p&gt;关于显示&lt;/p&gt;
@@ -263,26 +391,6 @@ fbset -a -xres 1280 -yres  720 -vxres 1280 -vyres  720
 fbset -a -xres 1920 -yres 1080 -vxres 1920 -vyres 1080
 &lt;/code&gt;&lt;/pre&gt;
 
-</description>
-      </item>
-    
-      <item>
-        <title>如何进入recovery 模式</title>
-        <link>http://itfanr.github.io/radxa123/2014/12/31/enter-recovery-mode.html</link>
-        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2014/12/31/enter-recovery-mode.html</guid>
-        <pubDate>Wed, 31 Dec 2014 00:00:00 +0800</pubDate>
-        <description>&lt;p&gt;只需要4步&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;断开电源&lt;/li&gt;
-  &lt;li&gt;拔掉USB线&lt;/li&gt;
-  &lt;li&gt;长按recovery键&lt;/li&gt;
-  &lt;li&gt;插入usb线到otg口&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;此时如何连接有刷机工具（RKBatchTool.exe， RKAndroidTool 或者linux下工具 ） 工具会自动识别设备&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://cn.radxa.com/data/attachment/forum/201412/10/115141iab5zgauntihlb0a.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 </description>
       </item>
     
@@ -499,9 +607,9 @@ communities/114007636590240429960&quot;&gt;Radxa Google Plus community&lt;/a&gt;
       </item>
     
       <item>
-        <title>2013.08.12 工程板</title>
-        <link>http://itfanr.github.io/radxa123/2014/12/29/20130812-Engineering-samples.html</link>
-        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2014/12/29/20130812-Engineering-samples.html</guid>
+        <title>2013.08.12 工程板发布</title>
+        <link>http://itfanr.github.io/radxa123/2014/12/29/20130812-engineering-samples-release.html</link>
+        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2014/12/29/20130812-engineering-samples-release.html</guid>
         <pubDate>Mon, 29 Dec 2014 00:00:00 +0800</pubDate>
         <description>&lt;blockquote&gt;
   &lt;p&gt;2013.08.12 值得记住的日子&lt;/p&gt;
@@ -522,8 +630,8 @@ communities/114007636590240429960&quot;&gt;Radxa Google Plus community&lt;/a&gt;
     
       <item>
         <title>将image烧写到NAND</title>
-        <link>http://itfanr.github.io/radxa123/2014/12/28/Flash-the-image-to-NAND.html</link>
-        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2014/12/28/Flash-the-image-to-NAND.html</guid>
+        <link>http://itfanr.github.io/radxa123/2014/12/28/flash-the-image-to-NAND.html</link>
+        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2014/12/28/flash-the-image-to-NAND.html</guid>
         <pubDate>Sun, 28 Dec 2014 00:00:00 +0800</pubDate>
         <description>&lt;blockquote&gt;
   &lt;p&gt;这篇文章描述了如何在Radxa Rock的nand flash上安装镜像，比如，如何烧写开发板。你可以选择烧写整个nand镜像（比如update.img）到开发板或者仅仅烧写选定的分区。你可以从我们的服务器下载prebuilt镜像或者编译你自己的镜像。&lt;/p&gt;

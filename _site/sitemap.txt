@@ -17,9 +17,15 @@
 
   /2015/01/01/Radxa-Rock-Lite-parameter.html
 
-  /2014/12/31/radxa-rock-display.html
+  /2015/01/01/20140610-Rock-pro-release.html
+
+  /2015/01/01/20140610-Rock-Lite-release.html
+
+  /2015/01/01/20131025-First-MP-version-release.html
 
   /2014/12/31/enter-recovery-mode.html
+
+  /2014/12/31/Radxa-Rock-display.html
 
   /2014/12/31/Radxa-Rock-Lite-docs.html
 
@@ -31,6 +37,6 @@
 
   /2014/12/29/Q-and-A.html
 
-  /2014/12/29/20130812-Engineering-samples.html
+  /2014/12/29/20130812-engineering-samples-release.html
 
-  /2014/12/28/Flash-the-image-to-NAND.html
+  /2014/12/28/flash-the-image-to-NAND.html
