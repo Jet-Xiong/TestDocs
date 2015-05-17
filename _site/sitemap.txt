@@ -11,7 +11,27 @@
 
   /page2/index.html
 
+  /page3/index.html
 
+
+
+  /2015/05/17/rock2-loder-mode.html
+
+  /2015/05/17/HDMI-resolution-adjustment.html
+
+  /2015/01/06/control-led-with-gpio.html
+
+  /2015/01/05/the-firmware-naming-rules.html
+
+  /2015/01/05/how-to-flash-on-linux.html
+
+  /2015/01/05/how-to-debug.html
+
+  /2015/01/05/hardware-docs.html
+
+  /2015/01/05/flash-the-image-to-SD-card.html
+
+  /2015/01/05/extension-header.html
 
   /2015/01/01/Radxa-Rock-Pro-parameter.html
 
@@ -23,9 +43,9 @@
 
   /2015/01/01/20131025-First-MP-version-release.html
 
-  /2014/12/31/enter-recovery-mode.html
+  /2014/12/31/radxa-rock-display.html
 
-  /2014/12/31/Radxa-Rock-display.html
+  /2014/12/31/enter-recovery-mode.html
 
   /2014/12/31/Radxa-Rock-Lite-docs.html
 
@@ -39,4 +59,4 @@
 
   /2014/12/29/20130812-engineering-samples-release.html
 
-  /2014/12/28/flash-the-image-to-NAND.html
+  /2014/12/28/Flash-the-image-to-NAND.html

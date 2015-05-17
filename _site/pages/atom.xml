@@ -6,6 +6,437 @@
     <description>raxda开发板的相关资料等汇总</description>
     
       <item>
+        <title>Rock2如何进入loder mode?</title>
+        <link>http://itfanr.github.io/radxa123/2015/05/17/rock2-loder-mode.html</link>
+        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2015/05/17/rock2-loder-mode.html</guid>
+        <pubDate>Sun, 17 May 2015 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;当板子如法启动，等待从PC通过USB OTG接口的命令，此时板子处于Loder mode。square baseboard有三个键，恢复键、重启键和电源键（recovery key, reset key and the power key）。当进入loder mode时，我们需要使用恢复键和重启键。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/1/1e/Loader_mode.jpg&quot; alt=&quot;此处输入图片的描述&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;为了进入loder mode，你应该：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;给板子上电，红色led指示板子开机&lt;/li&gt;
+  &lt;li&gt;连接USB OTG接口和PC（注意，你必须先连接OTG线，然后按下面的键）&lt;/li&gt;
+  &lt;li&gt;按住恢复键（靠近WiFi天线的那个）&lt;/li&gt;
+  &lt;li&gt;短按重启键（靠近DC的那个）&lt;/li&gt;
+  &lt;li&gt;放开恢复键&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;现在，开发板应该处于 loder 模式了。&lt;/p&gt;
+
+&lt;p&gt;Windows&lt;/p&gt;
+
+&lt;p&gt;Linux：&lt;/p&gt;
+
+&lt;p&gt;确保你有USB ID 2207:320a，此时rock2 square 处于loder模式了。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;lsusb
+...
+Bus 001 Device 018: ID 2207:320a
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For developers：&lt;/p&gt;
+
+&lt;p&gt;在u-boot命令行，你可以输入rockusb来进去loder模式。&lt;/p&gt;
+
+&lt;p&gt;你还可以看：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://radxa.com/Rock2/square_bb/hardware&quot;&gt;Rock2/square_bb/hardware&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://radxa.com/Rock/Loader_mode&quot;&gt;rock/Loader_mode&lt;/a&gt;&lt;/p&gt;
+
+</description>
+      </item>
+    
+      <item>
+        <title>HDMI分辨率调整</title>
+        <link>http://itfanr.github.io/radxa123/2015/05/17/HDMI-resolution-adjustment.html</link>
+        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2015/05/17/HDMI-resolution-adjustment.html</guid>
+        <pubDate>Sun, 17 May 2015 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;说明： &lt;br /&gt;
+1）如果显示器有输出，并且很清晰，只是上下边缘没有显示全&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;ROCK2 square&lt;br /&gt;
+请先参考 http://cn.radxa.com/forum.php?mo … &amp;amp;extra=page%3D1&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Rock pro &amp;amp; Rock lite&lt;br /&gt;
+   请参考http://radxa.com/Rock/display&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;2）目前这种方法适用于rock square, rock pro 和 rock lite&lt;/p&gt;
+
+&lt;p&gt;3）方法适用于Android 和 rabian &lt;/p&gt;
+
+&lt;p&gt;第一步：获取显示器的edid参数 （目前只找到windows下的工具）&lt;/p&gt;
+
+&lt;p&gt;下载工具&lt;br /&gt;
+http://dl.radxa.com/users/yao/sm_setup.exe&lt;br /&gt;
+http://dl.radxa.com/users/yao/Phoenix.zip&lt;/p&gt;
+
+&lt;p&gt;操作步骤&lt;br /&gt;
+使用SoftMCCS 软件，打开之后，软件界面如下&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://images.cnitblog.com/blog/152134/201301/30191707-565197d17e30422bac82f602e100a98b.jpg&quot; alt=&quot;此处输入图片的描述&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;1、打开 sm_setup.exe 软件&lt;/p&gt;
+
+&lt;p&gt;2、如果接了多台显示器，则在左上角栏中选择读取EDID的显示器型号，如”DELL E198WFP”&lt;/p&gt;
+
+&lt;p&gt;3、点击左上角“File -&amp;gt; Save EDID as”，将EDID信息保存在自己想要的位置，文件名可以自己指定，文件类型要选择“Raylar EDID file (*.dat)”&lt;br /&gt;
+用文本编辑工具（如写字板）打开刚刚保存的EDID文件，如下图&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://images.cnitblog.com/blog/152134/201301/30191853-e703dd60a80546f79fdfa39f8a96d919.jpg&quot; alt=&quot;此处输入图片的描述&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;第二步: 分析edid数据，得到相关参数&lt;br /&gt;
+刚才我们已经通过“SoftMCCS”软件获取了EDID数据文件，下面要介绍另一个软件来分析这个数据，“Phoenix EDID Designer”(Phoenix.zip)。软件只有一个exe文件，不需要安装。点击打开按钮，然后找到并打开我们刚刚保存的EDID文件，打开后如下图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://images.cnitblog.com/blog/152134/201301/30192346-393776216326489c8e66f39234d086dd.jpg&quot; alt=&quot;此处输入图片的描述&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;选择 “Detailed Timings”（详细时序） 这一项&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cn.radxa.com/data/attachment/forum/201504/29/113412ip45ya4b01ps1abn.png&quot; alt=&quot;此处输入图片的描述&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;其中Timings 这一栏是我们需要的东西&lt;br /&gt;
+从这个参数里面,我们可以得到显示器的&lt;br /&gt;
+pixclk是 106500000&lt;br /&gt;
+默认分辨率是：1440 x 900&lt;br /&gt;
+这个对应要修改的文件是&lt;br /&gt;
+drivers/video/rockchip/hdmi/hdmi-lcdc.c&lt;/p&gt;
+
+&lt;p&gt;其中：  &lt;br /&gt;
+h_fp = H sync Offset = 80; h_pw = H sync width = 152;&lt;br /&gt;
+h_bp + h_fp + h_pw = H Brank = 464,  所以 h_bp = 464 - 152 - 80 = 232。v_fp, v_bp,v_pw 和 h_fp,h_bp,h_pw 是同样的原理。至于后面的参数，可以直接使用下面的值（暂时还没有仔细研究区别，简单测试是可以用的）&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/*  name  refresh xres   yres    pixclock   h_bp    h_fp    v_bp    v_fp    h_pw    v_pw   polariry      PorI    flag     vic      2ndvic      pixelrepeat     interface */
+
+{ {&quot;1440x900p@60Hz&quot;, 60, 1440,   900,    106500000, 232,    80, 5, 3, 152,    6, 0,  0, 0 },
+2,  0,  1, OUT_P888},
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;修改后clean，然后重新编译内核&lt;/p&gt;
+
+&lt;p&gt;第三步： 刷修改后编译出的固件，设置分辨率&lt;/p&gt;
+
+&lt;p&gt;Rabian系统：&lt;/p&gt;
+
+&lt;p&gt;打开命令终端:  menu-&amp;gt;System Tools-&amp;gt; MATE Terminal&lt;br /&gt;
+或者通过串口执行以下命令：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#cat /sys/class/display/display0.HDMI/modes     
+1920x1080p-60
+..
+1440x900p-60
+..
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;查看hdmi支持的分辨率.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#echo 1440x900p-60 &amp;gt; /sys/class/display/display0.HDMI/mode1440x900p-60
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Android 系统：&lt;/p&gt;
+
+&lt;p&gt;设置-&amp;gt;display-&amp;gt;HDMI Mode 选择 1440x900p-60，此时的HDMI分辨率 已经变成 1440x900@60Hz.&lt;/p&gt;
+
+&lt;p&gt;以上内容在我们这边的显示器上测试成功。也有几个客户通过此方法修改ok，但不确定是否全部都行的通，有问题大家可以在此反馈。&lt;/p&gt;
+
+&lt;p&gt;遇到的问题：&lt;/p&gt;
+
+&lt;p&gt;1) 设置分辨率后发现，刷新频率和设置的不同，比如 1360x768@60Hz, pixclock =85500000，但是结果显示刷新频率只有46，这是什么情况?&lt;/p&gt;
+
+&lt;p&gt;这是由于你设置的pixclock，系统采用，系统根据你设置的clock找到一个更好的clock值，这个值你可以在kernel的log中看到，大致如下:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[  119.205896] lcdc1: dclk:75000000&amp;gt;&amp;gt;fps:46 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;为了达到60hz，你可以去调整 h_fp,h_bp,h_pw,v_fp,v_bp,v_pw的值(注意xres 和 yres不能改)。算法是（xres + h_fp + h_bp + h_pw） x (yres + v_fp + v_bp + v_pw) * fps = pixclock。其中fps 为刷新频率，比如  1360x768@60Hz 刷新频率就是60. &lt;/p&gt;
+
+&lt;p&gt;2) 把分辨率 和 频率都改对了，但是画面显示的时候有雪花，为何？&lt;/p&gt;
+
+&lt;p&gt;原因： 和 h_fp,h_bp,h_pw,v_fp,v_bp,v_pw值的设置有关，合理调整后看看效果。&lt;/p&gt;
+
+&lt;p&gt;3）无论如何修改，都没有变化，为何？&lt;br /&gt;
+请看修改是否生效，建议make clean ，然后重新编译内核。&lt;/p&gt;
+
+&lt;p&gt;关于EDID 的详细内容，可以参考：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;http://blog.csdn.net/wangpeiyao5566/article/details/45270773&lt;/li&gt;
+  &lt;li&gt;http://blog.csdn.net/wangpeiyao5566/article/details/45269379&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;参考：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;http://cn.radxa.com/forum.php?mod=viewthread&amp;amp;tid=303&amp;amp;extra=page%3D1&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>通过 GPIO 控制 Radxa 的 LED</title>
+        <link>http://itfanr.github.io/radxa123/2015/01/06/control-led-with-gpio.html</link>
+        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2015/01/06/control-led-with-gpio.html</guid>
+        <pubDate>Tue, 06 Jan 2015 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;在 Radxa Rock 官方的配置说明中，Radxa 板子上带了三个可编程控制的 LED 指示灯，正式版中分别为红、绿、蓝三个，并依次排列在电源开关附近。在启动默认的 android 系统的时候，也会亮起蓝色的指示灯。那要如何在 Linux 下控制这些 LED 呢？&lt;/p&gt;
+
+&lt;p&gt;首先来看 Radxa 官方的 Wiki 给出的一段演示脚本，用于控制绿色 LED 闪烁：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/bin/sh
+ 
+# enable the gpio 172 -&amp;gt; green led
+echo 172 &amp;gt; /sys/class/gpio/export
+ 
+# set the direction to output
+echo &quot;out&quot; &amp;gt; /sys/class/gpio/gpio172/direction
+while true;
+do
+    echo 0 &amp;gt; /sys/class/gpio/gpio172/value #led on
+    sleep 1
+    echo 1 &amp;gt; /sys/class/gpio/gpio172/value #led off
+    sleep 1
+done
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;从这个演示程序中可以看到 Radxa 的这个 LED 直接连接在了 GPIO 上，利用 Linux 系统下 /sys/class/gpio 这个文件接口进行操作就可以实现简单的控制功能。当然，如果有比较高级的需求的话，建议还是需要编写相关的驱动程序来操作 GPIO，不过这回就先不折腾驱动程序这部分了。&lt;/p&gt;
+
+&lt;p&gt;其实 LED 的控制非常简单，只需要控制对应的 GPIO 管脚电平高低即可控制其发光状态。为了控制这些管脚，需要了解的最主要信息无非就是 LED 对应的控制引脚编号。由于官方已经给出了这部分的设计图 http://dl.radxa.com/rock/docs/hw/RADXA_ROCK_schematic_20131025.pdf，所以要确定 LED 的控制引脚并不困难。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.huhamhire.com/wp-content/uploads/2014/02/rk_led_gpio.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;从设计图中，可以比较容易的找到，这些信息。绿色的 LED 连接在了 GPIO0_B4 位置，蓝色 LED 连接在了 GPIO0_B6，而红色的则由 GPIO0_B7 来控制。接下来就需要计算这些引脚在 Linux 系统下对应的编号，首先需要参考到 rk3188 内核源代码中关于 GPIO 这部分的头文件，https://github.com/Galland/Linux3188/blob/master/arch/arm/mach-rk30/include/mach/gpio.h。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.huhamhire.com/wp-content/uploads/2014/02/rk_led_pin.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;同样，可以很容易的找到这几个引脚的定义，以及它们编号的计算公式，然后只需要将 PIN_BASE = 160 以及 NUM_GROUP = 32 代入计算即可得出相应的引脚编号，这部分数据可以参考 http://hwswbits.blogspot.com/2013/10/bitbanging-radxa-rock-gpios.html。&lt;/p&gt;
+
+&lt;p&gt;简单的计算后，可以得出绿色、蓝色、红色 LED 的引脚编号分别为 172、174 以及 175。然后只需要写一个脚本就可以实现一些简单的控制，比如下面我就可以通过一个简单的脚本实现开机后自动熄灭红色 LED，并亮起绿色 LED 的功能。&lt;/p&gt;
+
+&lt;p&gt;首先创建脚本控制 LED 的脚本：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo vim /usr/local/bin/power-led-on.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;写入下面的内容：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
+ 
+for LED_IO in 172 175
+do
+    echo $LED_IO &amp;gt; /sys/class/gpio/export
+    echo &quot;out&quot; &amp;gt; /sys/class/gpio/gpio$LED_IO/direction
+    echo 0 &amp;gt; /sys/class/gpio/gpio$LED_IO/value
+    echo $LED_IO &amp;gt; /sys/class/gpio/unexport
+done
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里需要说明的是，由于连接线路上的不同，蓝绿 LED 与红色 LED 在发光控制的数值参数上正好相反。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.huhamhire.com/wp-content/uploads/2014/02/rk_led_gb.png&quot; alt=&quot;rk_led_gb&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;https://blog.huhamhire.com/wp-content/uploads/2014/02/rk_led_red.png&quot; alt=&quot;
+rk_led_red&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;蓝绿 LED 使用 0 输出控制点亮，1 控制熄灭；而红色 LED 则使用 1 控制点亮，0 控制熄灭。因而这里的操作就可以很方便的写在同一段循环体内。&lt;/p&gt;
+
+&lt;p&gt;接下来，为脚本文件赋予执行权限：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo chmod +x /usr/local/bin/power-led-on.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后编辑系统启动时的相关操作：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo vim rootfs/etc/rc.local
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在 exit 0 之前添加以下内容：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/local/bin/power-led-on.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在做完上面的这些设置以后，重启 Radxa 后，就可以看到板子上会亮起绿色 LED，并且红色 LED 熄灭。&lt;/p&gt;
+
+&lt;p&gt;参考：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;https://blog.huhamhire.com/viewpost-1109.html&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>固件命名规则</title>
+        <link>http://itfanr.github.io/radxa123/2015/01/05/the-firmware-naming-rules.html</link>
+        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2015/01/05/the-firmware-naming-rules.html</guid>
+        <pubDate>Mon, 05 Jan 2015 00:00:00 +0800</pubDate>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;警告:不同的产品要下对应的固件，否则会导致异常,&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;命名规则介绍&lt;/h2&gt;
+
+&lt;p&gt;比如radxa_rock_android_kitkat_r2_140909_nand.zip&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;radxa_rock ：产品名，适用于radxa_rock&lt;/li&gt;
+  &lt;li&gt;android: 是android固件&lt;/li&gt;
+  &lt;li&gt;kitkat :android的版本号 4.4&lt;/li&gt;
+  &lt;li&gt;r2 : 版本号&lt;/li&gt;
+  &lt;li&gt;140909 : 发布时间&lt;/li&gt;
+  &lt;li&gt;nand: 从Nand启动&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;再比如：radxa_rock_pro_ubuntu_14.04_server_140819_sdcard.img&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;radxa_rock_pro : 产品名&lt;/li&gt;
+  &lt;li&gt;ubuntu : 系统名 ubuntu固件&lt;/li&gt;
+  &lt;li&gt;14.04 : ubuntu 系统的版本号&lt;/li&gt;
+  &lt;li&gt;server : ubuntu server版本&lt;/li&gt;
+  &lt;li&gt;140819 : 版本发布日期&lt;/li&gt;
+  &lt;li&gt;sdcard : 从sdcard启动,这个需要制作SD卡&lt;/li&gt;
+  &lt;li&gt;我们的固件都在dl.radxa.com下面(百度云有一份镜像http://pan.baidu.com/s/1kTKFzYB)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这个目录下有rock,rock_lite,rock_pro 四个这样的文件夹，&lt;br /&gt;
+分别对应radxa的四个产品（rock2 暂时还没有推出），&lt;br /&gt;
+对应的产品的固件放在对应的目录下，比如 rock的android固件 http://dl.radxa.com/rock/images/android/。&lt;/p&gt;
+
+&lt;p&gt;参考：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;http://cn.radxa.com/forum.php?mod=viewthread&amp;amp;tid=65&amp;amp;extra=page%3D1&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Linux 下如何刷机</title>
+        <link>http://itfanr.github.io/radxa123/2015/01/05/how-to-flash-on-linux.html</link>
+        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2015/01/05/how-to-flash-on-linux.html</guid>
+        <pubDate>Mon, 05 Jan 2015 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;参考：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;http://cn.radxa.com/forum.php?mod=viewthread&amp;amp;tid=66&amp;amp;extra=page%3D1&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>如何调试</title>
+        <link>http://itfanr.github.io/radxa123/2015/01/05/how-to-debug.html</link>
+        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2015/01/05/how-to-debug.html</guid>
+        <pubDate>Mon, 05 Jan 2015 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;参考：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;http://cn.radxa.com/forum.php?mod=viewthread&amp;amp;tid=23&amp;amp;extra=page%3D1&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Radxa 硬件文档</title>
+        <link>http://itfanr.github.io/radxa123/2015/01/05/hardware-docs.html</link>
+        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2015/01/05/hardware-docs.html</guid>
+        <pubDate>Mon, 05 Jan 2015 00:00:00 +0800</pubDate>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;硬件文档下载&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;主板&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Schematic of board revision 2013.10.25 (pdf)&lt;/li&gt;
+  &lt;li&gt;Schematic of board revision 2014.06.10 (Rock Pro) (pdf)&lt;/li&gt;
+  &lt;li&gt;Board dimensions file (dxf) for rock - Open with LibreCAD under Linux and AutoCAD under Windows.&lt;/li&gt;
+  &lt;li&gt;Board dimensions file (dxf) for rock pro - Open with LibreCAD under Linux and AutoCAD under Windows.&lt;/li&gt;
+  &lt;li&gt;Components position reference for rock top(pdf) bottom(pdf)&lt;/li&gt;
+  &lt;li&gt;Components position reference for rock pro top and bottom(pdf)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;组件&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;CPU - RK3188 brief specification, RK3188 technical reference manual(TRM).&lt;/li&gt;
+  &lt;li&gt;PMU - ACT8846&lt;/li&gt;
+  &lt;li&gt;Wifi/BT Module - BL-8723RB1 or RTL8188ETV (only has wifi)&lt;/li&gt;
+  &lt;li&gt;Ethernet - LAN8720A&lt;/li&gt;
+  &lt;li&gt;AVOUT&amp;amp;code - RK1000s&lt;/li&gt;
+  &lt;li&gt;HDMI Chip(rock only) - IT66121FN&lt;/li&gt;
+  &lt;li&gt;HDMI and LVDS dual output(rock pro) - RK616&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;其他&lt;/h2&gt;
+
+&lt;p&gt;更多的硬件文档可以在http://dl.radxa.com/rock/docs/hw/下载&lt;/p&gt;
+
+&lt;p&gt;参考：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;http://radxa.com/Rock/hardware_docs&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>将image烧写到SD卡</title>
+        <link>http://itfanr.github.io/radxa123/2015/01/05/flash-the-image-to-SD-card.html</link>
+        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2015/01/05/flash-the-image-to-SD-card.html</guid>
+        <pubDate>Mon, 05 Jan 2015 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;参考：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;http://radxa.com/Rock/SD_images&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Radxa Rock(pro/lite)的扩展接口</title>
+        <link>http://itfanr.github.io/radxa123/2015/01/05/extension-header.html</link>
+        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2015/01/05/extension-header.html</guid>
+        <pubDate>Mon, 05 Jan 2015 00:00:00 +0800</pubDate>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Radxa Rock(pro/lite)有两个2.54mm 40引脚（20*2）的板载扩展接口，包括GPIO，I2C，SPI，Line in，USB 2.0，PWM，ADC，LCD等接口。你可以很容易地将面包板或者其他传感器板卡连接到rock。所有的rock/rock pro/rock lite都是兼容的。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;gpio&quot;&gt;只用作GPIO的扩展接口&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/8/87/Extension_header_funca.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;扩展接口的其他功能&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/f/fb/Extension_header_funcb.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;全部的功能表&lt;/h2&gt;
+
+&lt;p&gt;见http://radxa.com/Rock/extension_header&lt;/p&gt;
+
+&lt;h2 id=&quot;fpc&quot;&gt;FPC扩展接口&lt;/h2&gt;
+
+&lt;p&gt;Rock Pro and Lite(2014 Mid)在板子后面有三个FPC接口。&lt;/p&gt;
+
+&lt;h2 id=&quot;lvds&quot;&gt;LVDS链接器&lt;/h2&gt;
+
+&lt;p&gt;见http://radxa.com/Rock/extension_header&lt;/p&gt;
+
+&lt;p&gt;参考：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;http://radxa.com/Rock/extension_header&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      </item>
+    
+      <item>
         <title>Radxa Rock Pro的硬件配置</title>
         <link>http://itfanr.github.io/radxa123/2015/01/01/Radxa-Rock-Pro-parameter.html</link>
         <guid isPermaLink="true">http://itfanr.github.io/radxa123/2015/01/01/Radxa-Rock-Pro-parameter.html</guid>
@@ -219,29 +650,9 @@
       </item>
     
       <item>
-        <title>如何进入recovery 模式</title>
-        <link>http://itfanr.github.io/radxa123/2014/12/31/enter-recovery-mode.html</link>
-        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2014/12/31/enter-recovery-mode.html</guid>
-        <pubDate>Wed, 31 Dec 2014 00:00:00 +0800</pubDate>
-        <description>&lt;p&gt;只需要4步&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;断开电源&lt;/li&gt;
-  &lt;li&gt;拔掉USB线&lt;/li&gt;
-  &lt;li&gt;长按recovery键&lt;/li&gt;
-  &lt;li&gt;插入usb线到otg口&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;此时如何连接有刷机工具（RKBatchTool.exe， RKAndroidTool 或者linux下工具 ） 工具会自动识别设备&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://cn.radxa.com/data/attachment/forum/201412/10/115141iab5zgauntihlb0a.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-</description>
-      </item>
-    
-      <item>
         <title>关于显示</title>
-        <link>http://itfanr.github.io/radxa123/2014/12/31/Radxa-Rock-display.html</link>
-        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2014/12/31/Radxa-Rock-display.html</guid>
+        <link>http://itfanr.github.io/radxa123/2014/12/31/radxa-rock-display.html</link>
+        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2014/12/31/radxa-rock-display.html</guid>
         <pubDate>Wed, 31 Dec 2014 00:00:00 +0800</pubDate>
         <description>&lt;blockquote&gt;
   &lt;p&gt;关于显示&lt;/p&gt;
@@ -395,6 +806,26 @@ fbset -a -xres 1920 -yres 1080 -vxres 1920 -vyres 1080
       </item>
     
       <item>
+        <title>如何进入recovery 模式</title>
+        <link>http://itfanr.github.io/radxa123/2014/12/31/enter-recovery-mode.html</link>
+        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2014/12/31/enter-recovery-mode.html</guid>
+        <pubDate>Wed, 31 Dec 2014 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;只需要4步&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;断开电源&lt;/li&gt;
+  &lt;li&gt;拔掉USB线&lt;/li&gt;
+  &lt;li&gt;长按recovery键&lt;/li&gt;
+  &lt;li&gt;插入usb线到otg口&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;此时如何连接有刷机工具（RKBatchTool.exe， RKAndroidTool 或者linux下工具 ） 工具会自动识别设备&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cn.radxa.com/data/attachment/forum/201412/10/115141iab5zgauntihlb0a.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
         <title>Radxa Rock Lite 的相关资源</title>
         <link>http://itfanr.github.io/radxa123/2014/12/31/Radxa-Rock-Lite-docs.html</link>
         <guid isPermaLink="true">http://itfanr.github.io/radxa123/2014/12/31/Radxa-Rock-Lite-docs.html</guid>
@@ -408,6 +839,53 @@ fbset -a -xres 1920 -yres 1080 -vxres 1920 -vyres 1080
 
 &lt;pre&gt;&lt;code&gt;http://dl.radxa.com/rock_lite/images/android/readme.doc
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Radxa rock lite 的规格是1G RAM, Ethernet,wifi, USB x 2,AVOUT,sdcard，&lt;br /&gt;
+相比于 rock pro 少了 8G Flash ，1G RAM和蓝牙功能，是radxa rock pro的简版,价格为360RMB&lt;/p&gt;
+
+&lt;p&gt;淘宝链接:http://item.taobao.com/item.htm?spm=a230r.1.14.26.SYY7DZ&amp;amp;id=41040766536&amp;amp;ns=1#detail&lt;/p&gt;
+
+&lt;p&gt;Rock lite 直接从SD卡启动,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;android 固件下载地址：&lt;br /&gt;
+http://dl.radxa.com/rock_lite/images/android/&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;linux 固件下载地址：&lt;br /&gt;
+http://dl.radxa.com/rock_lite/images/linux/&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;或者到http://pan.baidu.com/s/1kTKFzYB 的 rock_lite目录下载,&lt;/p&gt;
+
+&lt;p&gt;刷机方式 请参考目录或者压缩包中的readme文档&lt;/p&gt;
+
+&lt;p&gt;如果下载速度较慢，可以使用迅雷下载&lt;/p&gt;
+
+&lt;p&gt;源码下载：Rock Lite 和 Rock Pro 用的是同一份代码，位于百度云盘 rock_pro目录下的source目录下。&lt;/p&gt;
+
+&lt;p&gt;如有疑问请加： radxa 讨论群 339567728或者邮件到support@radxa.com&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;如何编译android固件请参考：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;http://radxa.com/Rock/Android_Build&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;如何制作SD卡启动盘请参考：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;http://dl.radxa.com/rock_lite/images/android/ 下面的readme文档&lt;/p&gt;
+
+&lt;p&gt;参考：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;http://cn.radxa.com/forum.php?mod=viewthread&amp;amp;tid=103&amp;amp;extra=page%3D1&lt;/li&gt;
+  &lt;li&gt;http://cn.radxa.com/forum.php?mod=viewthread&amp;amp;tid=104&amp;amp;extra=page%3D1&lt;/li&gt;
+&lt;/ol&gt;
 </description>
       </item>
     
@@ -452,6 +930,68 @@ communities/114007636590240429960&quot;&gt;Radxa Google Plus community&lt;/a&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;Note：下载固件的时候，一定要先确定自己板子的版本，然后下载对应的版本的固件，否则会导致没有图像输出等异常&lt;/p&gt;
+
+&lt;p&gt;官方资料存放地址（两者内容是一样的）&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;http://dl.radxa.com&lt;/li&gt;
+  &lt;li&gt;http://pan.baidu.com/s/1hqiTKaS（百度云）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;固件地址&lt;/h2&gt;
+
+&lt;p&gt;radxa rock&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;http://dl.radxa.com/rock/images/android/        (Android固件)&lt;/li&gt;
+  &lt;li&gt;http://dl.radxa.com/rock/images/debian/         (debian固件)&lt;/li&gt;
+  &lt;li&gt;http://dl.radxa.com/rock/images/ubuntu/         (ubuntu固件)&lt;/li&gt;
+  &lt;li&gt;http://dl.radxa.com/rock/images/dual_boot/       (双启动固件)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;radxa rock pro&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;http://dl.radxa.com/rock_pro/images/android/     (android固件）&lt;/li&gt;
+  &lt;li&gt;http://dl.radxa.com/rock_pro/images/debian/      (debian固件）&lt;/li&gt;
+  &lt;li&gt;http://dl.radxa.com/rock_pro/images/ubuntu/      (ubuntu 固件)&lt;/li&gt;
+  &lt;li&gt;http://dl.radxa.com/rock_pro/images/dual_boot/    (双启动固件)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;radxa rock lite&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;http://dl.radxa.com/rock_lite/images/android/       （android固件）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;注：下载该目录下的固件后，请按照该目录下的readme文档来制作sdcard启动卡&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;http://dl.radxa.com/rock_lite/images/android/tablet/    （android 平板固件）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;百度云 http://pan.baidu.com/s/1hqiTKaS&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;打开该链接，该目录下有一个Imags文件夹,里面有rock_pro,rock_lite,rock 三个子文件夹&lt;br /&gt;
+里面存放对应的android和ubuntu镜像&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;代码下载&lt;/h2&gt;
+
+&lt;p&gt;http://pan.baidu.com/s/1kT7k7Nx  android4.4 （使用于rock pro,rock,rock lite）&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;文档下载&lt;/h2&gt;
+
+&lt;p&gt;http://pan.baidu.com/s/1pJyUDHx&lt;/p&gt;
+
+&lt;p&gt;参考：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;http://cn.radxa.com/forum.php?mod=viewthread&amp;amp;tid=68&amp;amp;extra=page%3D1&lt;/li&gt;
+&lt;/ol&gt;
 </description>
       </item>
     
@@ -503,6 +1043,11 @@ communities/114007636590240429960&quot;&gt;Radxa Google Plus community&lt;/a&gt;
 
 &lt;p&gt;将直流转USB线连接上USB电源，另一端插入开发板的DC直流接口。电源键下面的红色指示灯应该亮起，同时HDMI应该输出radxa的启动logo动画。等一会绿色或者蓝色指示灯会亮起。&lt;/p&gt;
 
+&lt;p&gt;参考：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;http://radxa.com/Rock/Getting_Started&lt;/li&gt;
+&lt;/ol&gt;
 </description>
       </item>
     
@@ -553,254 +1098,6 @@ communities/114007636590240429960&quot;&gt;Radxa Google Plus community&lt;/a&gt;
     &lt;p&gt;其余和Rock保持一致&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
-</description>
-      </item>
-    
-      <item>
-        <title>Q and A</title>
-        <link>http://itfanr.github.io/radxa123/2014/12/29/Q-and-A.html</link>
-        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2014/12/29/Q-and-A.html</guid>
-        <pubDate>Mon, 29 Dec 2014 00:00:00 +0800</pubDate>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;自问自答中。。。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;1、lubuntu 镜像的密码是什么&lt;/p&gt;
-
-&lt;p&gt;用户名 rock，密码rock &lt;br /&gt;
-用户名 root    密码root&lt;/p&gt;
-
-&lt;p&gt;2、系统不停重启&lt;/p&gt;
-
-&lt;p&gt;系统需要用5V/2A的电源供电,  单独用usb线供电&lt;/p&gt;
-
-&lt;p&gt;3、突然上电之后 绿色的灯不亮了 网口的绿色灯也不亮了 只有红色的指示灯，是系统没有启动吗？&lt;/p&gt;
-
-&lt;p&gt;这种问题有几种可能：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;是不是刷错了固件. 具体请看 “固件命名原则”的帖子&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;recovery键是不是被外壳压着了&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;4、linux下，接上显示器以后桌面显示不全，怎么办？&lt;/p&gt;
-
-&lt;p&gt;RR的默认HDMI输出是1080p，可更换更高分辨率的显示器或设置分辨率&lt;/p&gt;
-
-&lt;p&gt;5、LED怎么控制？&lt;/p&gt;
-
-&lt;p&gt;在linux下的c、python、shell的设置方法，详见http://wiki.radxa.com/Rock/led&lt;/p&gt;
-
-&lt;p&gt;6、两个扩展口都代表什么，编号是多少？&lt;/p&gt;
-
-&lt;p&gt;扩展口资料，详见http://wiki.radxa.com/Rock/extension_header &lt;/p&gt;
-
-&lt;p&gt;7、Android的源码哪里下载？&lt;/p&gt;
-
-&lt;p&gt;http://wiki.radxa.com/Rock/Android_Build#Get_the_source_code &lt;/p&gt;
-
-</description>
-      </item>
-    
-      <item>
-        <title>2013.08.12 工程板发布</title>
-        <link>http://itfanr.github.io/radxa123/2014/12/29/20130812-engineering-samples-release.html</link>
-        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2014/12/29/20130812-engineering-samples-release.html</guid>
-        <pubDate>Mon, 29 Dec 2014 00:00:00 +0800</pubDate>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;2013.08.12 值得记住的日子&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;第一块radxa rock样板也叫radxa rock工程板，只生产了100片。几乎所有的东西都运行良好。但是还是有一些小问题：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;HDMI接口太靠近SPDIF 插孔，可能会与一些大头的HDMI线冲突&lt;/li&gt;
-  &lt;li&gt;UART可以被一些5V TTL转USB损坏（警告：请务必使用3.3V TTL转USB线）&lt;/li&gt;
-  &lt;li&gt;复位键可以作为POWER halt功能，重启板子需要按重启键然后按电源键。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/thumb/a/ad/Rock_es_front.png/1000px-Rock_es_front.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-</description>
-      </item>
-    
-      <item>
-        <title>将image烧写到NAND</title>
-        <link>http://itfanr.github.io/radxa123/2014/12/28/flash-the-image-to-NAND.html</link>
-        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2014/12/28/flash-the-image-to-NAND.html</guid>
-        <pubDate>Sun, 28 Dec 2014 00:00:00 +0800</pubDate>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;这篇文章描述了如何在Radxa Rock的nand flash上安装镜像，比如，如何烧写开发板。你可以选择烧写整个nand镜像（比如update.img）到开发板或者仅仅烧写选定的分区。你可以从我们的服务器下载prebuilt镜像或者编译你自己的镜像。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;在你开始之前&lt;/h2&gt;
-
-&lt;p&gt;记住：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;你可以一直烧写rock，它不会变成板砖，除非一些硬件损坏了。
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;烧写开发板你需要做的是：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Radxa Rock(检查硬件版本，有Pro 和Full/Lite版，固件是不同的)&lt;/li&gt;
-  &lt;li&gt;一台电脑windows(win xp 32/64bit,win7 32//64bit或者linux 32/64bit)&lt;/li&gt;
-  &lt;li&gt;一个micro USB线-一端插在Radxa Rock的OTG口，另一端插在PC的USB口&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;windows&quot;&gt;windows平台&lt;/h2&gt;
-
-&lt;p&gt;烧写镜像的Windows工具由Rockchip提供。为了烧写&lt;a href=&quot;http://radxa.com/Rock/update.img&quot;&gt;update.img&lt;/a&gt;（你最好点击链接然后读这个页面，这对初学者很重要），你需要使用RKBath Tool然后烧写到分区，你需要使用RKDevelop Tool。RKBath Tool和RKDevelop Tool依赖于RK USB驱动，所以你需要首先安装一下：&lt;/p&gt;
-
-&lt;h3 id=&quot;section-1&quot;&gt;安装驱动&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;使用RKDriver Assistant tools-这是简单的方式（仅支持winxp,Vista,win7，不支持 win8）&lt;/li&gt;
-  &lt;li&gt;手动安装（支持winxp,vista,win7,win8）&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;如果你已经安装了USB驱动，请跳过这一步。&lt;/p&gt;
-
-&lt;h4 id=&quot;ardkriver-assistant-tools&quot;&gt;a.使用RDKriver Assistant tools&lt;/h4&gt;
-
-&lt;p&gt;注意：这个方式仅支持winxp,vista,win7,不支持win8。&lt;/p&gt;
-
-&lt;p&gt;在这个过程中仅仅下载和解压&lt;a href=&quot;http://dl.radxa.com/rock/tools/windows/RK_DriverAssitant.zip&quot;&gt;RKDriverAssistant.zip&lt;/a&gt;，没必要连接你的Rockchip设备。然后双击 DriverInstall.exe 启动安装。如果你已经事先已经安装过了Rockchip USB 驱动，请先确保你卸载了。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/b/ba/RK_Driver_Assistant_Install_Uninstall.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;点击“Install Driver”。当驱动安装完了，然后关掉Radxa开发板，然后连接Radxa Rock到你的电脑，让开发板进入&lt;a href=&quot;http://radxa.com/Rock/Loader_mode&quot;&gt;loder 模式&lt;/a&gt;，然后你的电脑会检测开发板，你会看到它在设备管理器里面了：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/2/2a/RK_Driver_Assistant_Install_Usb_driver.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;这时，驱动应该已经成功安装了，恭喜你！&lt;/p&gt;
-
-&lt;h4 id=&quot;b&quot;&gt;b.手动安装&lt;/h4&gt;
-
-&lt;p&gt;先下载驱动。如果你使用winxp,win7系统，从这里下载&lt;a href=&quot;http://dl.radxa.com/rock/tools/windows/usb_driver_v3.5.zip&quot;&gt;usb_driver_v3.5.zip&lt;/a&gt;。 win8系统呢，从这里下载&lt;a href=&quot;http://dl.radxa.com/rock/tools/windows/Rockusb%20Driver%20v3.7.zip&quot;&gt;usb_driver_v3.7.zip&lt;/a&gt;。关闭Radxa Rock开发板，然后连接Radxa Rock到电脑，让开发板进入到loder模式。在你的电脑检测到开发板后，你会看到设备管理器是这样的：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/4/44/Flash_image_1.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;选择未识别的设备，右击，然后选择“更新软件驱动”。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/a/a5/Flash_image_2.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;选择“浏览电脑查找驱动”&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/4/43/Flash_image_2.5.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;找到你解压好的驱动文件（usb_driver_v3.5.zip），然后选择32/64位文件夹，然后点击“确定”安装。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/e/e9/Flash_image_3.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;当驱动正确安装了，你会在设备管理器看到Rock USB设备。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/6/66/Flash_image_6.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;驱动搞定了！&lt;/p&gt;
-
-&lt;h3 id=&quot;section-2&quot;&gt;烧写镜像&lt;/h3&gt;
-
-&lt;p&gt;有两种方法烧写镜像：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;使用RKBatch Tool（工厂更新固件工具，只烧写update.img，它会擦出所有的东西）&lt;/li&gt;
-  &lt;li&gt;使用RKAndroid Tool(开发工具，可以烧写分区)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;rkbatch-toolupdateimg&quot;&gt;使用RKBatch Tool来烧写update.img&lt;/h4&gt;
-
-&lt;p&gt;从&lt;a href=&quot;http://dl.radxa.com/rock/tools/windows/RK_BatchTool_V1.7.zip&quot;&gt;这里&lt;/a&gt;下载RKbatch Tool。解压并运行RKBatch Tool.exe，你会看到下面的界面：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/1/18/Flash_image_7.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;选择镜像（rockdev/update.img)。可以查看&lt;a href=&quot;http://radxa.com/Rock/update.img&quot;&gt;这里&lt;/a&gt;来看如何制作nand 镜像。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/c/ca/Flash_image_8.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;关闭Radxa Rock开发板，然后将它连接到电脑上，让开发板进入loder模式，此时程序应该检测到了设备。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/5/59/Flash_image_9.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;点击“Update”按钮开始烧写，当烧写结束，你应该看到下面的界面：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/9/9a/Flash_image_10.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;如果烧写中断，它会导致update.img出现错误，你可以重新操作以上步骤或者重新制作update.img。&lt;/p&gt;
-
-&lt;h4 id=&quot;rkandroid-tool&quot;&gt;使用RKAndroid Tool来烧写到分区&lt;/h4&gt;
-
-&lt;p&gt;从&lt;a href=&quot;http://dl.radxa.com/rock/tools/windows/RKDevelopTool_v1.37.zip&quot;&gt;这里&lt;/a&gt;下载RKAndroid Tool。解压，然后运行RKAndroidTool.exe，你会看到：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/2/28/Rkandroidtool_flash_image_1.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;关闭Radxa Rock开发板，然后将它连接到电脑上，让开发板进入loder模式，此时程序应该检测到了设备。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/6/6d/Rkandroidtool_flash_image_2.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;有八个选择可以选，所以选择正确的行，然后选中行左侧的复选框。然后你必须点击右侧的列来选择你要烧写的文件。你可以选择一个或者多个文件，然后一次性烧写进去。最终，点击“Run”来开始烧写。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/c/ce/Rkandroidtool_flash_image_3.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;如果成功了开发板会从电脑断开，然后启动系统。&lt;/p&gt;
-
-&lt;p&gt;请注意：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;当你通过&lt;code&gt;./mkimage.sh ota&lt;/code&gt;命令打包镜像，内核会在boot.img里面，你应该看&lt;a href=&quot;http://radxa.com/Rock/Android_Build&quot;&gt;Rock/Android_Build &lt;/a&gt;得到更多信息。&lt;/li&gt;
-  &lt;li&gt;你可以按照需求一次性烧写一个或多个镜像。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;section-3&quot;&gt;常见问题&lt;/h3&gt;
-
-&lt;h4 id=&quot;recovery-rkbatchtool-&quot;&gt;问题1:  recovery模式下 RKBatchTool 检测不到开发板&lt;/h4&gt;
-
-&lt;p&gt;情景1：&lt;/p&gt;
-
-&lt;p&gt;我已经手动安装了驱动，并且Recovery模式的USB为PID_310B，“Rockusb device”驱动在Vista上安装成功了，但是RKBatchTool连接不到RK3188的板子，导致无法烧写镜像。&lt;/p&gt;
-
-&lt;p&gt;解决办法:&lt;/p&gt;
-
-&lt;p&gt;RK3188板通过USB3.0 PMMCIA卡连接到笔记本电脑。这是一个USB2.0到USB3.0的兼容性问题，所以USB3.0端口换成USB 2.0端口，然后RKBatchTool应该可以连接到RK3188板子来烧写镜像了。&lt;/p&gt;
-
-&lt;p&gt;说明:&lt;br /&gt;
-1.Recovery 模式 : USB 设备硬件:  VID_2207&amp;amp;PID_310&lt;/p&gt;
-
-&lt;p&gt;2.引导进Android:  USB 设备硬件: VID_2207&amp;amp;PID_0006&lt;/p&gt;
-
-&lt;p&gt;情景2：&lt;/p&gt;
-
-&lt;p&gt;驱动安装正常，PC可以识别到设备，确定进入了recovery模式，但是一直BatchTool一直无法识别设备。&lt;/p&gt;
-
-&lt;p&gt;原因分析：使用了自己从网上下载的刷机工具，比如BatchTool 1.5.&lt;/p&gt;
-
-&lt;p&gt;解决办法：使用教程中指定的BatchTool工具&lt;/p&gt;
-
-&lt;h4 id=&quot;section-4&quot;&gt;问题2: 烧写失败&lt;/h4&gt;
-&lt;p&gt;情景1：烧写后，串口打印：&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-DDR Version 1.04 20130517 In DDR3 300MHz Bus Width=32 Col=10 Bank=8 Row=15 CS=2 Die Bus-Width=16 Size=2048MB Memory OK OUT BUILD=====6 SdmmcInit=0 20 F:32 1061 0 0 40 FlashReadRetry error!!,row = fff000 FlashReadRetry error!!,row = fff000   
-&lt;/code&gt;&lt;br /&gt;
-同时无法引导。&lt;/p&gt;
-
-&lt;p&gt;解决办法:&lt;/p&gt;
-
-&lt;p&gt;如果烧写失败，尝试在烧写前格式化NandFlash。&lt;/p&gt;
-
-&lt;p&gt;RKAndroidTool - 单击 “Erease IDB”按钮，格式化NandFlash。&lt;br /&gt;
-RKBatchTool    - 单击 “Restore”按钮格式化，然后烧写镜像。&lt;/p&gt;
-
-&lt;p&gt;情景2: 刷机的时候 遇到 Preparing IDB failed&lt;br /&gt;
-这有两种情况 &lt;/p&gt;
-
-&lt;p&gt;1）USB线供电不足，此时建议更换质量好的USB线 或者在进入刷机模式后插上电源&lt;/p&gt;
-
-&lt;p&gt;2 ) bootloader 版本不同导致，如果你之前刷的固件的bootloader版本是高版本，然后刷回低版本的固件，那么你可能会遇到这个问题。板子这是“变砖”了。。。按照这个 http://wiki.radxa.com/Rock/unbrick 解决它。&lt;/p&gt;
 </description>
       </item>
     

@@ -126,3 +126,7 @@ Android 系统：
   [2]: http://images.cnitblog.com/blog/152134/201301/30191853-e703dd60a80546f79fdfa39f8a96d919.jpg
   [3]: http://images.cnitblog.com/blog/152134/201301/30192346-393776216326489c8e66f39234d086dd.jpg
   [4]: http://cn.radxa.com/data/attachment/forum/201504/29/113412ip45ya4b01ps1abn.png
+  
+  参考：
+  
+  -  http://cn.radxa.com/forum.php?mod=viewthread&tid=303&extra=page%3D1
