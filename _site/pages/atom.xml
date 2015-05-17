@@ -175,6 +175,53 @@ Bus 001 Device 018: ID 2207:320a
       </item>
     
       <item>
+        <title>Rock2 Full Baseboard</title>
+        <link>http://itfanr.github.io/radxa123/2015/05/17/Rock2-Full-Baseboard.html</link>
+        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2015/05/17/Rock2-Full-Baseboard.html</guid>
+        <pubDate>Sun, 17 May 2015 00:00:00 +0800</pubDate>
+        <description>&lt;ul&gt;
+  &lt;li&gt;Oct 11, 2014&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;第一块 PCB 样板到了&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/d/de/Rock2_module_pcb_top.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/b/bf/Rock2_module_pcb_bottom.png&quot; alt=&quot;image&quot; /&gt; &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Oct 11, 2014 &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;module 终于 SMT 了，现在等待 baseboard…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/9/9d/Rock2_module_smt.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Nov 2, 2014&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;base board 到了，酷吗？&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/b/b0/Rock2_base_top.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://radxa.com/mw/images/8/82/Rock2_base_bottom.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bring up：&lt;/p&gt;
+
+&lt;p&gt;如何使 basic system 在 rock2 上运行？&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://radxa.com/Rock2/bringup&quot;&gt;Rock2 bringing up&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;参考：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;http://radxa.com/Rock2/full_bb&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      </item>
+    
+      <item>
         <title>HDMI分辨率调整</title>
         <link>http://itfanr.github.io/radxa123/2015/05/17/HDMI-resolution-adjustment.html</link>
         <guid isPermaLink="true">http://itfanr.github.io/radxa123/2015/05/17/HDMI-resolution-adjustment.html</guid>
@@ -1009,112 +1056,6 @@ http://dl.radxa.com/rock_lite/images/linux/&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;http://cn.radxa.com/forum.php?mod=viewthread&amp;amp;tid=103&amp;amp;extra=page%3D1&lt;/li&gt;
   &lt;li&gt;http://cn.radxa.com/forum.php?mod=viewthread&amp;amp;tid=104&amp;amp;extra=page%3D1&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-      </item>
-    
-      <item>
-        <title>各种资源和社区</title>
-        <link>http://itfanr.github.io/radxa123/2014/12/29/resources-and-community.html</link>
-        <guid isPermaLink="true">http://itfanr.github.io/radxa123/2014/12/29/resources-and-community.html</guid>
-        <pubDate>Mon, 29 Dec 2014 00:00:00 +0800</pubDate>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;radxa有很多资源和社区，各路大神帮你答疑解惑，各种资源应有尽有。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://radxa.com/&quot;&gt;英文官网&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://cn.radxa.com/&quot;&gt;中文论坛cn.radxa.com&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://talk.radxa.com/&quot;&gt;英文论坛Radxa Talk&lt;/a&gt; &lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://plus.google.com/
-communities/114007636590240429960&quot;&gt;Radxa Google Plus community&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.facebook.com/groups/218416868348521/&quot;&gt;Facebook Group Page&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/#!forum/radxa&quot;&gt;radxa google groups&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://webchat.freenode.net/?channels=radxa&quot;&gt;IRC channel on Freenode&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://wiki.radxa.com/Rock&quot;&gt;Radxa wiki&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://radxa.com/Rock/download&quot;&gt;下载源码、镜像、工具、原理图&lt;br /&gt;
-&lt;/a&gt;  &lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Note：下载固件的时候，一定要先确定自己板子的版本，然后下载对应的版本的固件，否则会导致没有图像输出等异常&lt;/p&gt;
-
-&lt;p&gt;官方资料存放地址（两者内容是一样的）&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;http://dl.radxa.com&lt;/li&gt;
-  &lt;li&gt;http://pan.baidu.com/s/1hqiTKaS（百度云）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;固件地址&lt;/h2&gt;
-
-&lt;p&gt;radxa rock&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;http://dl.radxa.com/rock/images/android/        (Android固件)&lt;/li&gt;
-  &lt;li&gt;http://dl.radxa.com/rock/images/debian/         (debian固件)&lt;/li&gt;
-  &lt;li&gt;http://dl.radxa.com/rock/images/ubuntu/         (ubuntu固件)&lt;/li&gt;
-  &lt;li&gt;http://dl.radxa.com/rock/images/dual_boot/       (双启动固件)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;radxa rock pro&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;http://dl.radxa.com/rock_pro/images/android/     (android固件）&lt;/li&gt;
-  &lt;li&gt;http://dl.radxa.com/rock_pro/images/debian/      (debian固件）&lt;/li&gt;
-  &lt;li&gt;http://dl.radxa.com/rock_pro/images/ubuntu/      (ubuntu 固件)&lt;/li&gt;
-  &lt;li&gt;http://dl.radxa.com/rock_pro/images/dual_boot/    (双启动固件)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;radxa rock lite&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;http://dl.radxa.com/rock_lite/images/android/       （android固件）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;注：下载该目录下的固件后，请按照该目录下的readme文档来制作sdcard启动卡&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;http://dl.radxa.com/rock_lite/images/android/tablet/    （android 平板固件）&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;百度云 http://pan.baidu.com/s/1hqiTKaS&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;打开该链接，该目录下有一个Imags文件夹,里面有rock_pro,rock_lite,rock 三个子文件夹&lt;br /&gt;
-里面存放对应的android和ubuntu镜像&lt;/p&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;代码下载&lt;/h2&gt;
-
-&lt;p&gt;http://pan.baidu.com/s/1kT7k7Nx  android4.4 （使用于rock pro,rock,rock lite）&lt;/p&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;文档下载&lt;/h2&gt;
-
-&lt;p&gt;http://pan.baidu.com/s/1pJyUDHx&lt;/p&gt;
-
-&lt;p&gt;参考：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;http://cn.radxa.com/forum.php?mod=viewthread&amp;amp;tid=68&amp;amp;extra=page%3D1&lt;/li&gt;
 &lt;/ol&gt;
 </description>
       </item>
