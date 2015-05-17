@@ -46,3 +46,7 @@ For developers：
 [1]: http://radxa.com/mw/images/1/1e/Loader_mode.jpg
 [2]: http://radxa.com/Rock2/square_bb/hardware
 [3]: http://radxa.com/Rock/Loader_mode
+
+参考：
+
+- http://radxa.com/Rock2/square_bb/loader_mode
